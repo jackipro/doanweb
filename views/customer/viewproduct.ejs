@@ -1,0 +1,33 @@
+<html>
+  <style>
+    body {
+        font-family: 'Noto Sans SC', sans-serif;
+        padding-top: 150px;
+        padding-left: 350px;
+        background-color: turquoise;
+        
+      }
+</style>
+
+<body>
+  <h2>Chi tiết sản phẩm</h2>
+  <table>
+    <tr>
+      <td>
+        <img src="data:image/jpg;base64,<%= product.image %>" width="400" height="400" />
+      </td>
+      <td>
+        ID: <%= product._id %><br />
+        Tên: <%= product.name %><br />
+        Giá bán: <%= product.price %><br />
+        <form action="/add2cart" method="POST">
+          <input type="hidden" name="txtID" value="<%= product._id %>" />
+          Số lượng: <input type="text" name="txtQuantity" /><br />
+          <input type="submit" value="Thêm vào giỏ hàng" />
+        </form>
+      </td>
+    </tr>
+  </table>
+</body>
+
+</html>

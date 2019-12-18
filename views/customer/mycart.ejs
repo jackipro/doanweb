@@ -1,0 +1,42 @@
+<html>
+  <style>
+    body {
+        font-family: 'Noto Sans SC', sans-serif;
+        padding-top: 150px;
+        padding-left: 340px;
+        background-color: turquoise;
+        
+      }
+</style>
+  <body>
+    <h2>ĐƠN HÀNG</h2>
+    <table border="1">
+      <tr>
+        <th>ID</th>
+        <th>Tên</th>
+        <th>Ảnh</th>
+        <th>Giá bán</th>
+        <th>Số lượng</th>
+        <th>Thành tiền</th>
+        <th>Trạng thái</th>
+      </tr>
+      <% 
+        var total = 0;
+        for (var item of session.mycart) {
+          total += item.product.price * item.quantity;
+      %>
+      <tr>
+        <td><%= item.product._id %></td>
+        <td><%= item.product.name %></td>
+        <td><img src="data:image/jpg;base64,<%= item.product.image %>" width="70" height="70" /></td>
+        <td><%= item.product.price %></td>
+        <td><%= item.quantity %></td>
+        <td><%= item.product.price * item.quantity %></td>
+        <td><a href="/remove2cart/<%= item.product._id %>">Remove</a></td>
+      </tr>
+      <%  } %>
+    </table>
+    <h3>Total = <%= total %></h3>
+    <a href="/checkout">Kiểm tra đơn hàng</a>
+  </body>
+</html>

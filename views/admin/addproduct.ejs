@@ -1,0 +1,39 @@
+<html>
+ 
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
+  integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans+SC&display=swap" rel="stylesheet"> 
+<style>
+    body {
+        font-family: 'Noto Sans SC', sans-serif;
+        padding-top: 250px;
+        padding-left: 500px;
+        background-color: turquoise;
+        
+      }
+</style>
+ 
+    
+    <form action="addproduct" method="POST" enctype="multipart/form-data">
+      <table>
+        <tr>
+          <td>Tên</td>
+          <td><input type="text" name="txtName" /></td>
+        </tr>
+        <tr>
+          <td>Giá bán</td>
+          <td><input type="text" name="txtPrice" /></td>
+        </tr>
+        <tr>
+          <td>Ảnh</td>
+          <td><input type="file" name="fileImage" /></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td><input type="submit" value="Thêm mới" /></td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>

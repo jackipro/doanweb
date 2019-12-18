@@ -1,0 +1,76 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+SC&display=swap" rel="stylesheet">
+    <style>
+      #formlogin {
+        width: 30%;
+        
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 200px;
+        padding-top: 20px;
+        border: 1px solid #CDCDCD;
+        text-align: center;
+        line-height: 20px;
+        font-family: 'Noto Sans SC', sans-serif;
+        background-color: #e3f6f5;
+        
+      }
+    
+      #formlogin input {
+        margin-bottom: 20px;
+        border: 1px solid black;
+        
+      }
+
+      #formlogin .username {
+        height: 40px;
+        widows: 50%;
+        border-radius: 10px;
+      }
+
+      #formlogin .tittle {
+        background-color: white;
+
+        /* border: 1px solid black; */
+        position: absolute; 
+        top: -10px;
+        left: 30%;
+        width: auto;
+        padding-right: 10px;
+        padding-left: 10px;
+        border-radius: 10px;
+      }
+
+    </style>
+    
+  </head>
+
+<body>
+  <div id="formlogin">
+    <h1 style="margin-bottom: 20px;">ĐĂNG NHẬP</h1>
+    <form action="/admin/login" method="POST">
+      <!-- BACKup -->
+      <!-- Tài khoản  : <input type="text" name="txtUsername" /><br />
+      Mật khẩu   :  <input type="password" name="txtPassword" /><br /> -->
+
+        <!-- Demo -->
+        <div style="position: relative;"> 
+          <span class="tittle">Username:</span>
+          <input type="text" name="txtUsername" class="username">
+        </div>
+
+        <div style="position: relative;"> 
+          <span class="tittle">Password:</span>
+          <input type="password" name="txtPassword" class="username">
+        </div>
+
+      <input type="submit" value="LOGIN" class="btn btn-danger" />
+    </form>
+  </div>
+  
+</body>
+
+</html>

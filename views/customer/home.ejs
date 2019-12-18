@@ -1,0 +1,27 @@
+<html>
+  <body>
+
+   
+    <h3 align="center"><a href="/mycart">My cart</a> have <%= (session.mycart) ? session.mycart.length : 0 %> items</h3>
+    <table align="center">
+      <% var nCols = 3;
+      var nRows = Math.ceil(products.length / nCols);
+      for (var r = 0; r < nRows; r++) { %>
+      <tr>
+        <% for (var c = 0; c < nCols; c++) { 
+            if (r * nCols + c < products.length) {
+              var product = products[r * nCols + c];
+        %>
+        <td align="center">
+          <a href="/viewproduct/<%= product._id %>">
+            <img src="data:image/jpg;base64,<%= product.image %>" width="300" height="300" /><br/>
+          </a>
+          <%= product.name %><br/>
+          <%= product.price %><br/>
+        </td>
+        <% }  } %>
+      </tr>
+      <% } %>
+    </table>
+  </body>
+</html>
